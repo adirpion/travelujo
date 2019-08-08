@@ -838,3 +838,25 @@ a {
         font-weight: 400;
         margin:0.25rem 0 1rem 0;
     }
+
+.site-footer{
+    padding: 0.5rem 0;
+    background-color:#2f5572;
+    text-align:center;
+}
+
+.site-footer__text{
+        color:#FFF;
+        font-weight: 200;
+        display:block;
+        margin-bottom:1rem;
+    }
+
+@media (min-width:800px){
+
+.site-footer__text{
+            display:inline;
+            margin-bottom:0;
+            margin-right:1.4rem
+    }
+    }
