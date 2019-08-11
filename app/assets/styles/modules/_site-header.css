@@ -7,7 +7,7 @@
 
     &--is-expended{
         background-color: rgba($mainBlue, 0.55);
-    }
+    }   
 
     @mixin atMedium{
         
