@@ -10,7 +10,7 @@
     }   
 
     @mixin atMedium{
-        
+
         background-color: rgba($mainBlue, 0.3);
     }
 
@@ -27,6 +27,7 @@
             transform: scale(1);
             opacity:1;
             padding-top:0;
+            z-index: 10;
         }
 
         &--is-visable{
