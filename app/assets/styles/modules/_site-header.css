@@ -1,0 +1,129 @@
+.site-header{
+    position:absolute;
+    z-index: 2;
+    width:100%;
+    padding:10px 0;
+    transition: background-color 0.5s ease-out;
+
+    &--is-expended{
+        background-color: rgba($mainBlue, 0.55);
+    }
+
+    @mixin atMedium{
+        
+        background-color: rgba($mainBlue, 0.3);
+    }
+
+    &__menu-content{
+        opacity:0;
+        padding-top:90px;
+        position:relative;
+        z-index:-10;
+        transform: scale(1.2);
+        transition: all 0.3s ease-out;
+        text-align:center;
+        
+        @mixin atMedium {
+            transform: scale(1);
+            opacity:1;
+            padding-top:0;
+        }
+
+        &--is-visable{
+            opacity:1;
+            z-index:1;
+            transform: scale(1);
+        }
+    }
+
+    &__logo{
+        position:absolute;
+        padding:25px 36px;
+        background-color:$mainBlue;
+        top:0;
+        left:50%;
+        transform:translateX(-50%) scale(0.8);
+        transform-origin: 50% 0;
+
+        @mixin atMedium{
+            left:auto;
+            transform:scale(1);
+            transform:translateX(0);
+
+        }
+
+    }
+
+    &__icon-menu{
+        position:absolute;
+        width:20px;
+        height:19px;
+        top:10px;
+        right:20px;
+        z-index:10;
+
+        &::before{
+            content:"";
+            position:absolute;
+            top:0;
+            left:0;
+            width:20px;
+            height:3px;
+            background-color:#FFF;
+            transform-origin:0 0;
+            transition: transform 0.3s ease-out;
+
+        }
+
+        &__middle{
+            position:absolute;
+            top:8px;
+            left:0;
+            width:20px;
+            height:3px;
+            background-color:#FFF;
+            transition: all 0.3s ease-out;
+        }
+
+        &::after{
+            content:"";
+            position:absolute;
+            bottom:0;
+            left:0;
+            width:20px;
+            height:3px;
+            background-color:#FFF;
+            transform-origin:0 100%;
+            transition: transform 0.3s ease-out;
+        }
+
+        @mixin atMedium{
+            display:none;
+        }
+    }
+
+    &__icon-menu--close-x{
+        &::before{
+            transform:rotate(45deg) scaleX(1.25) ;
+
+        }
+
+        .site-header__icon-menu__middle{
+            opacity:0;
+        }
+
+        &::after{
+            transform:rotate(-45deg) scaleX(1.25) translateY(1px);
+
+        }
+    }
+
+    &__btn-container{
+
+        text-align:center;
+        @mixin atMedium{
+            float:right;
+        }
+    }
+
+}

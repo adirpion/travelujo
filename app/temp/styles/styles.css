@@ -379,6 +379,14 @@ a {
         text-align: center;
         width: 100%;
         transform: translateY(-50%);
+        padding-top:100px;
+    }
+
+@media (min-width:800px){
+
+.large-hero__text-content{
+            padding-top:60px
+    }
     }
 
 .large-hero__title{
